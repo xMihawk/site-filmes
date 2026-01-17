@@ -1,0 +1,29 @@
+/* STARS */
+.stars {
+  display:flex;
+  gap:6px;
+  margin-top:6px;
+}
+
+.stars span {
+  font-size:26px;
+  cursor:pointer;
+  color:#555;
+}
+
+.stars span.active {
+  color:#ffd700;
+}
+
+.stars span.favorita {
+  color:#ffd700;
+  text-shadow:
+    0 0 8px rgba(255,215,0,.8),
+    0 0 16px rgba(255,215,0,.6);
+}
+
+/* FAVORITO POR ESTRELA */
+.card.favorito {
+  border: 1px solid rgba(255,215,0,.7);
+  box-shadow: 0 0 12px rgba(255,215,0,.4);
+}

@@ -1,0 +1,63 @@
+/* CARD TOP */
+.card-top {
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:5;
+}
+
+/* FAVORITO ❤️ */
+.fav {
+  cursor:pointer;
+  font-size:20px;
+  opacity:.35;
+  transition:.3s;
+}
+
+.fav.active {
+  opacity:1;
+  color:#ff4f7b;
+  filter: drop-shadow(0 0 6px rgba(255,80,120,.8));
+}
+
+/* TAGS */
+.tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:8px;
+}
+
+.tag {
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  cursor:pointer;
+}
+
+.tag.active {
+  background:var(--accent);
+  color:#000;
+}
+
+/* STATUS */
+.badge {
+  position:absolute;
+  top:10px;
+  left:10px;
+  padding:6px 10px;
+  font-size:12px;
+  border-radius:999px;
+  font-weight:bold;
+}
+
+.status-nao {
+  background:#e74c3c;
+  color:#fff;
+}
+
+.card.nao-gostamos {
+  border:1px solid #b00020;
+  opacity:.85;
+}

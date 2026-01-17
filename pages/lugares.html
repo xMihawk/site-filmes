@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>🌍 Catálogo de Lugares</title>
+<link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="css/lugares.css">
+
+
+</head>
+
+<body>
+
+<header>
+  <h1> 🌍Catálogo de Lugares</h1>
+  <nav>
+    <button><a href="../index.html">🏠 Início</a></button>
+    <button><a href="filmes.html">🎬 Filmes</a></button>
+    <button><a href="comidas.html">🍔 Comidas</a></button>
+    <button id="btn-sorteio-lugar">🎲 Sortear Lugar</button> <div id="resultado-lugar"></div>
+  </nav>
+</header>
+
+<div class="controls">
+  <select id="filtro">
+    <option value="todos">Todos</option>
+    <option value="pendentes">Pendentes</option>
+    <option value="concluidos">Visitados</option>
+  </select>
+
+  <select id="ordem">
+    <option value="nome">Nome (A–Z)</option>
+    <option value="nota">Nota ⭐</option>
+    <option value="status">Concluídos primeiro</option>
+  </select>
+
+  <input id="busca" placeholder="Buscar lugar">
+  <button id="btnResetar">Resetar tudo</button>
+</div>
+
+<div class="progress-box">
+  <div class="progress"><span id="barra"></span></div>
+  <div class="progress-text" id="progressoTxt"></div>
+</div>
+<section class="grid" id="grid"></section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <a class="instagram" target="_blank">📸</a>
+    <button id="btnNaoGostamos">🚫 Não gostamos</button>
+    <textarea id="mObs" placeholder="Anotações pessoais..."></textarea>
+  </div>
+</div>
+<script type="module" src="../js/lugares.js"></script>
+</body>
+</html>
+
+

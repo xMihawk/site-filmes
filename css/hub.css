@@ -1,0 +1,68 @@
+.hub {
+  min-height: calc(100vh - 160px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hub-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width:900px;
+}
+
+.hub-grid .card {
+  padding:25px;
+  text-align:center;
+  cursor:pointer;
+  background: rgba(26, 26, 46, 0.75);
+}
+/* ===== COMBO DA SEMANA ===== */
+.combo {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 24px;
+  background: rgba(26, 26, 46, 0.75);
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  transform: translateY(30px) scale(0.97);
+  transition: .6s ease;
+}
+
+.combo.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.combo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.combo-item {
+  background: rgba(255,255,255,.06);
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+  animation: fadeUp .6s ease forwards;
+}
+
+.combo-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+
+.combo-item strong {
+  display: block;
+  margin-top: 6px;
+}
+
+.hidden {
+  display: none !important;
+}

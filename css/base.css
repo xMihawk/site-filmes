@@ -1,0 +1,146 @@
+:root{
+  --bg:#0b0b14;
+  --card:#1a1a2e;
+  --accent:#ff3d71;
+  --done:#2ecc71;
+  --text:#fff;
+  --muted:#b3b3c7;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:
+    linear-gradient(rgba(11,11,20,.85), rgba(11,11,20,.85)),
+    url("../images/background/fundo.jpeg") center 40%/cover no-repeat fixed;
+  color:var(--text);
+}
+
+/* HEADER */
+header{text-align:center;padding:30px}
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+
+  text-shadow:
+    0 0 12px rgba(255,61,113,.25),
+    0 0 24px rgba(108,99,255,.15);
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* CONTROLS */
+.controls{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+select,input,button{
+  padding:10px 14px;
+  border:none;
+  border-radius:8px;
+  background:var(--card);
+  color:var(--text);
+}
+button{cursor:pointer}
+
+/* PROGRESS */
+.progress-box{
+  max-width:600px;
+  margin:20px auto;
+  text-align:center;
+}
+.progress{
+  height:10px;
+  background:#333;
+  border-radius:10px;
+  overflow:hidden;
+}
+.progress span{
+  display:block;
+  height:100%;
+  background:var(--done);
+  width:0;
+  transition:.5s;
+}
+.progress-text{color:var(--muted);margin-top:8px}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:25px;
+  padding:40px;
+  max-width:1400px;
+  margin:auto;
+}
+
+/* CARD BASE */
+.card{
+  background:var(--card);
+  border-radius:16px;
+  overflow:hidden;
+  position:relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform .3s ease, box-shadow .3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* CARD COVER */
+.card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.1),
+    rgba(0,0,0,.4)
+  );
+}
+
+/* CONTENT */
+.card-content{padding:15px}
+.card-content h3{font-size:1rem}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.8);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.modal-content{
+  background:var(--card);
+  padding:25px;
+  border-radius:14px;
+  max-width:600px;
+  width:90%;
+}
+a {
+  text-decoration:none;
+  color:inherit;
+}

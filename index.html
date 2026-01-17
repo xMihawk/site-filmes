@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de filmes, comidas e lugares para explorar.">
+  <meta charset="UTF-8">
+  <title>Hub Principal</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/hub.css">
+
+</head>
+<body>
+<div id="combo" class="combo hidden">
+  <h3>✨ Combinação da semana</h3>
+
+  <div class="combo-grid">
+    <div class="combo-item" id="combo-filme"></div>
+    <div class="combo-item" id="combo-comida"></div>
+    <div class="combo-item" id="combo-lugar"></div>
+  </div>
+
+  <button id="btn-resortear">🔁 Sortear novamente</button>
+</div>
+
+<header>
+  <h1>📌Nosso Catálogo</h1>
+  <p>Escolha uma categoria</p>
+</header>
+<main class="hub">
+<section class="grid hub-grid">
+  <a class="card" href="pages/filmes.html">
+    <div class="card-content">
+      <h2>🎬 Filmes</h2>
+      <p class="muted">Filmes para assistir</p>
+    </div>
+  </a>
+
+  <a class="card" href="pages/comidas.html">
+    <div class="card-content">
+      <h2>🍔 Comidas</h2>
+      <p class="muted">Comidas para avaliar</p>
+    </div>
+  </a>
+
+  <a class="card" href="pages/lugares.html">
+    <div class="card-content">
+      <h2>🌍 Lugares</h2>
+      <p class="muted">Lugares para visitar</p>
+    </div>
+  </a>
+ <div class="card" id="card-sorteio"> <div class="card-content"> <h2>🎲 Sortear Tudo</h2> <p class="muted">Sortear uma combinação</p> <div id="resultado-geral" class="muted"></div> </div> </div>
+
+</section>
+</main>
+<footer>© Nosso Catálogo</footer>
+</body>
+</html>
